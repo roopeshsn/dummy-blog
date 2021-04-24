@@ -18,11 +18,14 @@ const Create = () => {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(blog),
-    }).then(() => {
-      console.log("Done");
-      setIsPending(false);
-      history.push("/");
-    });
+    })
+      .then(() => {
+        setIsPending(false);
+        history.push("/");
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
   };
 
   return (
