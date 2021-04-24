@@ -1,3 +1,7 @@
+# Dummy Blog
+
+This is my first application which is built using React.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
