@@ -4,14 +4,18 @@ import useFetch from "../useFetch";
 const BlogDetails = () => {
   const { id } = useParams();
   const { data: blog, error, isPending } = useFetch(
-    "https://my-json-server.typicode.com/theroopesh/dummy-blog-json/blogs/" + id
+    "https://dummy-blog-9878b-default-rtdb.asia-southeast1.firebasedatabase.app/blogs.json/" + id
   );
   const history = useHistory();
 
   const handleDelete = () => {
-    fetch("https://my-json-server.typicode.com/theroopesh/dummy-blog-json/blogs/" + blog.id, {
-      method: "DELETE",
-    }).then(() => {
+    fetch(
+      "https://dummy-blog-9878b-default-rtdb.asia-southeast1.firebasedatabase.app/blogs.json/" +
+        blog.id,
+      {
+        method: "DELETE",
+      }
+    ).then(() => {
       history.push("/");
     });
   };
